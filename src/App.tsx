@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 
 type Slide = {
   id: string;
@@ -154,7 +154,7 @@ export default function App() {
           <section className="page page-expertise">
             <PageChrome slide={current} />
             <div className="expertise-head"><span className="big-index">05</span><h2 className="display reveal delay-1">Built with<br /><em>intent.</em></h2></div>
-            <div className="skill-editorial">{skills.map((skill, index) => <div className="skill-row reveal" style={{ "--delay": `${index * 70}ms` } as React.CSSProperties} key={skill}><span>0{index + 1}</span><strong>{skill}</strong><i>↗</i></div>)}</div>
+            <div className="skill-editorial">{skills.map((skill, index) => <div className="skill-row reveal" style={{ "--delay": `${index * 70}ms` } as CSSProperties} key={skill}><span>0{index + 1}</span><strong>{skill}</strong><i>↗</i></div>)}</div>
           </section>
         )}
 
@@ -162,7 +162,7 @@ export default function App() {
           <section className="page page-work">
             <PageChrome slide={current} />
             <div className="work-head"><div><span className="big-index">06</span><h2 className="display reveal delay-1">Things we've<br /><em>built.</em></h2></div><span className="work-count">03 SELECTED PROJECTS</span></div>
-            <div className="project-editorial">{projects.map(([number, title, description, stack], index) => <article className="project-card reveal" style={{ "--delay": `${index * 90}ms` } as React.CSSProperties} key={number}><span className="project-no">{number}</span><div className="project-image"><span>{number}</span><small>PROJECT / {number}</small></div><h3>{title}</h3><p>{description}</p><small>{stack}</small></article>)}</div>
+            <div className="project-editorial">{projects.map(([number, title, description, stack], index) => <article className="project-card reveal" style={{ "--delay": `${index * 90}ms` } as CSSProperties} key={number}><span className="project-no">{number}</span><div className="project-image"><span>{number}</span><small>PROJECT / {number}</small></div><h3>{title}</h3><p>{description}</p><small>{stack}</small></article>)}</div>
           </section>
         )}
 
